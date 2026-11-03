@@ -51,7 +51,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 
 <div class="sect" style="border-color:#ffcc00;background:#fffbe6">
 <h4>📱 MIS REDES OFICIALES - EDUARDO JAVIER MORA GONZALEZ</h4>
-<a class="btn btn-fb" href="https://www.facebook.com/share/p/1GXVZVenoL/" target="_blank">📘 FACEBOOK - Ver Publicación Hoy</a>
+<a class="btn btn-fb" href="https://www.facebook.com/share/p/1GXVZVenoL/" target="_blank">📘 FACEBOOK - Inicio de Semana</a>
 <a class="btn btn-ig" href="https://www.instagram.com/eduardojaviermoragonzalez" target="_blank">📸 INSTAGRAM</a>
 <a class="btn btn-yt" href="https://www.youtube.com/@EduardoJavierMoraGonzalez" target="_blank">▶️ YOUTUBE</a>
 </div>
@@ -75,7 +75,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <div class="auto-grid">
 <div><b>Informativa</b><div id="pdf-informativa"></div></div>
 <div><b>Constitutiva</b><div id="pdf-constitutiva"></div></div>
-<div><b>Resolutiva</b><div id="pdf-resolutiva"></div></div>
+<div><b>Resolutiva (3ra)</b><div id="pdf-resolutiva"></div></div>
 </div>
 </div>
 
@@ -85,7 +85,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 </div>
 
 <div class="sect" id="card-colonias" style="border:3px solid #0d47a1;display:none">
-<h4>📍 COLONIAS Y GESTIONES SERVICIOS PUBLICOS</h4>
+<h4>📍 COLONIAS Y GESTIONES SERVICIOS PUBLICOS - AUTOMATICO</h4>
 <div class="auto-grid">
 <div><b>Colonias</b><div id="colonias-lista"></div></div>
 <div><b>💡 Alumbrado</b><div id="gestion-alumbrado"></div></div>
@@ -97,67 +97,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <div class="sect">
 <h4>CALENDARIO OFICIAL</h4>
 <ul>
-<li><b>Convocatoria y Registro:</b> Hasta 18 Octubre 2026 - Cierre Padron Nacional Art 24,33</li>
-<li><b>Periodo Organizacion Interna:</b> Hasta 13 Diciembre 2026 - Art 41 Bis - LIPEEY Art 196 actividades ordinarias no son actos anticipados</li>
-<li><b>Resultados:</b> Hasta 31 Diciembre 2026 - Art 44,44 Bis,46</li>
-<li><b>Sin precampaña:</b> Solo organizacion territorial - Art 196 y 198 LIPEEY</li>
-</ul>
-</div>
-
-<div class="sect">
-<h4>FUNDAMENTO ASPIRACION</h4>
-<p>Esta pagina NO promueve candidatura. Es manifestacion para COORDINADOR DE ORGANIZACION DE MORENA Art 15-20 Estatuto. No solicita voto. Actividad ordinaria Art 196 LIPEEY Jurisdiccion interna Art 34 LGIPE.</p>
-</div>
-
-<div class="sect">
-<h4>1. ESTATUTO MORENA BLINDAJE COMPLETO</h4>
-<ul>
-<li><b>Cap I Art 1-3:</b> No Mentir No Robar No Traicionar</li>
-<li><b>Art 4-6:</b> Afiliacion, buena fama, no condenados VPMRG, no deudor alimentario</li>
-<li><b>Art 14 Bis 15-20:</b> CDT, Asambleas Municipales cada 3 meses</li>
-<li><b>Art 42-46:</b> Seleccion candidaturas encuesta insaculacion</li>
-<li><b>Art 47-66:</b> Honestidad y Justicia</li>
-</ul>
-</div>
-</div>
-<div class="legal">
-<b>AVISO LEGAL BLINDADO</b> Documento dirigido exclusivamente a Protagonistas Cambio Verdadero Art 4,5,6 Estatuto Art 196 y 198 LIPEEY Art 3,5,25,34 LGIPE Art 6,9,35 CPEUM. No solicita voto. Objeto organizacion interna Art 15-20 Estatuto. Folio 11394-025 Convocatoria 31 Agosto y 8 Octubre 2026. Conciencia Pura 24/7
-</div>
-</div>
-<script>
-const repo="z68-cyber/z68-cyber.github.io";
-async function listar(ruta, idContenedor, idCard, esVideo=false){
- const cont=document.getElementById(idContenedor);
- const card=document.getElementById(idCard);
- if(!cont || !card) return;
- try{
-  const res=await fetch(`https://api.github.com/repos/${repo}/contents/${ruta}?t=${Date.now()}`);
-  if(!res.ok){card.style.display="none"; return;}
-  const archivos=await res.json();
-  let lista=archivos.filter(f=>f.type==="file" && !f.name.includes(".gitkeep")).reverse();
-  if(lista.length==0){card.style.display="none"; return;}
-  card.style.display="block";
-  cont.innerHTML="";
-  lista.forEach(f=>{
-   if(esVideo && f.name.match(/\.(mp4|webm|mov|m4v)$/i)){
-    cont.innerHTML+=`<div class="file"><b>📍 ${f.name}</b><br><video controls playsinline src="https://raw.githubusercontent.com/${repo}/main/${ruta}/${f.name}" style="width:100%"></video></div>`;
-   }else if(f.name.match(/\.pdf$/i)){
-    cont.innerHTML+=`<div class="file">📄 <a href="https://raw.githubusercontent.com/${repo}/main/${ruta}/${f.name}" target="_blank">${f.name}</a></div>`;
-   }else{
-    cont.innerHTML+=`<div class="file"><a href="https://raw.githubusercontent.com/${repo}/main/${ruta}/${f.name}" target="_blank">${f.name}</a></div>`;
-   }
-  });
- }catch(e){card.style.display="none";}
-}
-listar("pdf/asambleas-informativas","pdf-informativa","card-pdfs");
-listar("pdf/asambleas-constitutivas","pdf-constitutiva","card-pdfs");
-listar("pdf/asambleas-resolutivas","pdf-resolutiva","card-pdfs");
-listar("videos/regeneracion","videos-regeneracion","card-videos",true);
-listar("colonias","colonias-lista","card-colonias");
-listar("gestiones/servicios-publicos/alumbrado","gestion-alumbrado","card-colonias");
-listar("gestiones/servicios-publicos/bacheo","gestion-bacheo","card-colonias");
-listar("gestiones/servicios-publicos/agua","gestion-agua","card-colonias");
-listar("gestiones/servicios-publicos/basura","gestion-basura","card-colonias");
-</script>
-</body>
-</html>
+<li><b>Convocatoria y Registro:</b> Hasta <b>18 de Octubre de 2026</b> - Cierre Padron Nacional Protagonistas del Cambio Verdadero Art 24,33 - Publicacion 30 dias anticipacion Art 25</li>
+<li><b>Periodo Organizacion Interna Actividades Ordinarias:</b> Hasta <b>13 de Diciembre de 2026</b> (Fecha limite) - Art 41 Bis - LIPEEY Art 196 actividades ordinarias permanentes no son actos anticipados</li>
+<li><b>Dictamen y Resultados Finales Encuesta Insaculacion Consejo Nacional:</b> Hasta <b>31 de Diciembre de 2026</b> - Art 44,44 Bis,46 - Comision Nacional Elecciones Comision Nacional Encuestas dictamen inapelable</li>
+<li><b>Sin actos precampana campana:</b> Solo organizacion territorial - Art 196 y 198 LIPEEY - Art
