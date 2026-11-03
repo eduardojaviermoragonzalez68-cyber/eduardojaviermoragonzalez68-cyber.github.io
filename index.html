@@ -3,55 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EDUARDO JAVIER MORA GONZALEZ - Conciencia Pura 24/7 - Kanasín</title>
+<title>EDUARDO JAVIER MORA GONZALEZ - Kanasín</title>
 <style>
-body{font-family:Arial;background:#5a0a0a;color:white;margin:0;padding:10px}
-h1{color:#ffeb3b} .video-box{background:#000;border:3px solid #0d47a1;margin:15px 0;padding:10px;border-radius:10px}
-video{width:100%;border-radius:10px} .blindaje{font-size:11px;background:#111;padding:8px;margin-top:8px;border-left:4px solid #ffeb3b}
-a{color:#ffeb3b}
+body{background:#5a0a0a;color:white;font-family:Arial, sans-serif;margin:0;padding:0}
+.container{max-width:900px;margin:auto;padding:15px}
+h1{color:#ffeb3b;font-size:32px;line-height:1.1;margin-bottom:5px;text-transform:uppercase}
+h2{color:#ffeb3b;border-bottom:3px solid #ffeb3b;padding-bottom:5px;margin-top:25px}
+.card{background:rgba(0,0,0,0.3);border:2px solid #0d47a1;border-radius:12px;padding:15px;margin:15px 0}
+.blindaje{font-size:11px;background:#111;padding:10px;border-left:4px solid #ffeb3b;margin-top:10px}
+video{width:100%;border-radius:10px}
+select{width:100%;padding:12px;font-size:16px;margin:10px 0;border-radius:8px}
+a{color:#ffeb3b;word-break:break-all}
+.foto{width:100%;border-radius:12px;border:3px solid #ffeb3b}
 </style>
 </head>
 <body>
+<div class="container">
 <h1>EDUARDO JAVIER MORA GONZALEZ</h1>
-<p>Aspirante a Coordinación Municipal - Comités Defensa Transformación y Soberanía Nacional Kanasín Yucatán</p>
-<p>PROCESO INTERNO MORENA - Convocatoria 31 Agosto y 8 Octubre 2026 - Folio 11394-025</p>
-<p>Estatuto MORENA Art 15-20 | LIPEEY Art 196 198 Actividades Ordinarias No Son Actos Anticipados | LGIPE Art 34 | CPEUM Art 6 9 35 | Tres Niveles Gobierno</p>
-<hr>
+<p><b>Aspirante a Coordinación Municipal - Comités Defensa Transformación y Soberanía Nacional Kanasín Yucatán</b><br>
+MORITA EL MOTOTAXISTA - 10 Años de servicio en mototaxi en Kanasín<br>
+Conciencia Pura 24/7</p>
+
+<div class="card">
+<p><b>PROCESO INTERNO MORENA</b><br>
+Convocatoria 31 Agosto y 8 Octubre 2026<br>
+Folio 11394-025 - Acuse de Envío de Solicitud de Registro</p>
+<p style="font-size:12px">Este documento es acuse de envío, no garantiza ni implica procedencia o aprobación de solicitud de registro. Por lo que tampoco acredita definición de persona solicitante para ocupar Coordinación alguna, ni genera expectativa de derecho alguno. Art 34 LGIPE Jurisdicción interna partidos - Art 41 CPEUM - Art 15-20 Estatuto MORENA.</p>
+</div>
+
+<div class="card">
+<h2>¿Quién Soy?</h2>
+<p>10 años escuchando al pueblo en mi mototaxi, ahora escuchando en la puerta de su casa. No soy funcionario, no tengo nómina de gobierno. Soy pueblo, vecino de Kanasín.</p>
+<p><b>Principios:</b> No Mentir, No Robar, No Traicionar. Art 1-3 Estatuto MORENA. Con el Pueblo Todo Sin el Pueblo Nada.</p>
+</div>
+
+<div class="card">
 <h2>🎥 Videos Entrega Periódico Regeneración - En Territorio</h2>
-<div id="videos">Cargando videos de entrega...</div>
+<p>Actividad ordinaria de difusión territorial Art 15-20 Estatuto MORENA | Art 196 LIPEEY IEPAC Actividades Ordinarias Permanentes no constituyen actos anticipados | Art 198 LIPEEY Procesos Internos</p>
+<select id="filtroColonias"></select>
+<div id="videos">Cargando videos... Si no ves videos, crea la carpeta videos/.gitkeep en GitHub</div>
+</div>
+
+<div class="card">
+<p><b>Contacto:</b> Kanasín Yucatán<br>
+<b>Info:</b> z68-cyber.github.io<br>
+Conciencia Pura 24/7 | IMAGEN CREADA CON IA cuando aplique<br>
+Folio 11394-025</p>
+</div>
+
+</div>
 
 <script>
 async function cargarVideos(){
   const repo="z68-cyber/z68-cyber.github.io";
   const carpeta="videos";
-  const contenedor=document.getElementById("videos");
+  const cont=document.getElementById("videos");
+  const filtro=document.getElementById("filtroColonias");
   try{
     const res=await fetch(`https://api.github.com/repos/${repo}/contents/${carpeta}?t=${Date.now()}`);
-    if(!res.ok) throw new Error("No hay carpeta videos aún");
+    if(!res.ok) throw new Error();
     const archivos=await res.json();
-    const videos=archivos.filter(f=>f.name.match(/\.(mp4|webm|mov|m4v)$/i)).reverse();
-    if(videos.length==0){contenedor.innerHTML="Aún no hay videos. Sube tu primer video a la carpeta /videos";return;}
-    contenedor.innerHTML="";
-    videos.forEach(v=>{
-      const fecha=v.name.split("_")[0]||"";
-      const div=document.createElement("div");
-      div.className="video-box";
-      div.innerHTML=`
-        <h3>${v.name}</h3>
-        <video controls playsinline src="https://raw.githubusercontent.com/${repo}/main/${carpeta}/${v.name}"></video>
-        <div class="blindaje">
-        ENTREGA PERIÓDICO REGENERACIÓN - Órgano oficial de MORENA - Actividad ordinaria de difusión territorial Art 15-20 Estatuto MORENA | Art 196 LIPEEY IEPAC Actividades Ordinarias Permanentes de partidos no constituyen actos anticipados de precampaña o campaña | Art 198 LIPEEY Procesos Internos | Art 34 LGIPE | Art 41 CPEUM | No solicita voto | No difunde plataforma electoral | Dirigido a Protagonistas del Cambio Verdadero Art 4 5 6 | PROCESO INTERNO CONVOCATORIA 31 AGOSTO Y 8 OCTUBRE 2026 | Folio 11394-025 | IMAGEN Y VIDEO CAPTADO EN TERRITORIO REAL KANASÍN YUCATÁN | Conciencia Pura 24/7
-        </div>
-      `;
-      contenedor.appendChild(div);
-    });
+    let videos=archivos.filter(f=>f.name.match(/\.(mp4|webm|mov|m4v)$/i)).reverse();
+    if(videos.length==0){cont.innerHTML="Aún no hay videos. Sube con formato 2026-11-02_Mulchechen_Calle23.mp4";return;}
+    let colonias=[...new Set(videos.map(v=>(v.name.split("_")[1]||"General")))];
+    filtro.innerHTML='<option value="todas">Ver todas las colonias ('+videos.length+' videos)</option>';
+    colonias.forEach(c=>{filtro.innerHTML+=`<option value="${c}">${c}</option>`});
+    function pintar(f){
+      cont.innerHTML="";
+      let lista=f=="todas"?videos:videos.filter(v=>v.name.includes(f));
+      lista.forEach(v=>{
+        let p=v.name.split("_");
+        let fecha=p[0]||""; let col=p[1]||""; let calle=(p[2]||"").replace(".mp4","");
+        cont.innerHTML+=`<div class="card"><h3>📍 ${col} - ${calle} | ${fecha}</h3><video controls playsinline src="https://raw.githubusercontent.com/${repo}/main/${carpeta}/${v.name}"></video><div class="blindaje">ENTREGA REGENERACIÓN en ${col} ${calle} KANASÍN - Art 15-20 Estatuto - Art 196 LIPEEY - Proceso Interno 31 Ago y 8 Oct 2026 - Folio 11394-025 - Conciencia Pura 24/7</div></div>`;
+      });
+    }
+    pintar("todas");
+    filtro.onchange=()=>pintar(filtro.value);
   }catch(e){
-    contenedor.innerHTML=`<p>Aún no has creado la carpeta /videos. <br>1. En GitHub dale a Add file > Create new file<br>2. Escribe videos/.gitkeep<br>3. Commit<br>4. Luego sube videos con nombre tipo 2026-11-02_entrega_regeneracion_colonia.mp4</p>`;
+    cont.innerHTML=`<p style="color:yellow">1. Crea carpeta: Add file > Create new file > escribe <b>videos/.gitkeep</b> > Commit<br>2. Luego sube videos tipo: <b>2026-11-02_SanJose_Calle15.mp4</b></p>`;
   }
 }
 cargarVideos();
 </script>
-<hr>
-<p>Contacto: Kanasín Yucatán | Con el Pueblo Todo Sin el Pueblo Nada | Conciencia Pura 24/7 | IMAGEN CREADA CON IA cuando aplique</p>
 </body>
 </html>
