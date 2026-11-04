@@ -20,8 +20,9 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 .box-yellow{background:#ffcc00;color:#000;font-weight:900;font-size:11px;padding:7px 10px;border-radius:6px;display:inline-block;margin:10px 0;line-height:1.25;text-align:center}
 .sub{font-weight:900;font-size:13px;margin-top:6px}
 .img-main{width:100%;display:block;border-top:4px solid #ffcc00;border-bottom:4px solid #ffcc00}
-.img-perfil{width:220px;height:220px;object-fit:cover;border-radius:50%;border:4px solid #ffcc00;display:block;margin:14px auto}
+.img-perfil{width:220px;height:220px;object-fit:cover;border-radius:50%;border:4px solid #ffcc00;display:block;margin:14px auto;background:#7a0a12}
 .img-mototaxi{width:100%;display:block;border-top:4px solid #7a0a12;border-bottom:4px solid #7a0a12;margin:8px 0}
+img{font-size:0;color:transparent}
 .content{padding:10px}
 .title-main{color:#7a0a12;text-align:center;font-size:19px;font-weight:900;line-height:1.2;margin:10px 0;text-transform:uppercase}
 .subtitle{color:#111;text-align:center;font-size:13px;font-weight:700;margin:4px 0}
@@ -48,7 +49,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <div class="topbar">EMK-ESTAMOS-MEJORANDO-KANASIN-24-7 | MORENA La Esperanza de Mexico | KANASIN YUCATAN | CONCIENCIA PURA 24/7</div>
 <div class="logo-bar"><div class="logo-icon">KANASIN</div><div class="logo-text"><b>LA CAPITAL DEL PANUCHO, ES</b><span>EDUARDO JAVIER MORA GONZALEZ</span></div></div>
 
-<!-- MENU PRINCIPAL - SOLO 6 - LO DEMAS VA ADENTRO -->
+<!-- MENU PRINCIPAL - SOLO 6 -->
 <div class="menu">
 <a href="#inicio">INICIO</a>
 <a href="#biografia">BIOGRAFÍA</a>
@@ -65,10 +66,10 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <div class="sub">EL VERDADERO CAMBIO LO HACEMOS TODOS<br>CON EL PUEBLO TODO, SIN EL PUEBLO NADA</div>
 </div>
 
-<!-- TUS 3 FOTOS ORIGINALES + RESPALDO NUEVO -->
-<img class="img-main" src="foto-principal.jpg" alt="Eduardo Mora Mototaxi Arco Kanasin" onerror="this.onerror=null;this.src='fotos/biografia/Foto_Biografia_Bienvenida_01.jpg'">
-<img class="img-perfil" src="foto.jpg" alt="Eduardo Javier Mora Gonzalez Guayabera" onerror="this.onerror=null;this.src='fotos/formacion/Foto_Biografia_Formacion_01.jpg'">
-<img class="img-mototaxi" src="image4.jpg" alt="Mototaxi 10 anos llevando familias Kanasin" onerror="this.onerror=null;this.src='fotos/galeria/Foto_Galeria_01.jpg'">
+<!-- FOTOS CON NOMBRES REALES DE GITHUB -->
+<img class="img-main" src="image.jpg" alt="" onerror="if(!this.dataset.i){this.dataset.i=1;this.src='image5.jpg'}else if(this.dataset.i==1){this.dataset.i=2;this.src='image6.jpg'}else{this.style.display='none'}">
+<img class="img-perfil" src="image2.jpg" alt="" onerror="if(!this.dataset.i){this.dataset.i=1;this.src='image.jpg'}else if(this.dataset.i==1){this.dataset.i=2;this.src='image5.jpg'}else{this.style.display='none'}">
+<img class="img-mototaxi" src="image4.jpg" alt="" onerror="if(!this.dataset.i){this.dataset.i=1;this.src='image6.jpg'}else if(this.dataset.i==1){this.dataset.i=2;this.src='image.jpg'}else{this.style.display='none'}">
 
 <div class="content">
 <p class="title-main">Aspirante para la<br>Coordinacion de los<br>Comites de Defensa de la<br>Transformacion y Soberania Nacional</p>
@@ -80,21 +81,18 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <div class="date-box"><b>RESULTADOS</b><span>31 DIC 2026</span><small>Art 44,44 Bis</small></div>
 </div>
 
-<!-- ============ 1. BIOGRAFIA ============ -->
+<!-- 1. BIOGRAFIA -->
 <div class="sect" id="biografia">
 <h4>📖 BIOGRAFIA - Mi Vida, Mi Formacion, Mi Ninez</h4>
 <p>Aqui van TODOS tus archivos de Biografia. Tu subes y solo aparecen aqui.</p>
-
 <div class="subbox"><h3>🎥 VIDEOS DE BIOGRAFIA</h3><div id="videos-biografia">Cargando videos de biografia...</div>
 <div class="card"><span class="tag">VIDEO</span> <b>Video Bienvenida - Fijo</b><div class="btns"><a class="btn btn-ver" href="videos/biografia/Video_Biografia_Bienvenida_01.mp4" target="_blank">▶ VER</a><a class="btn btn-down" href="videos/biografia/Video_Biografia_Bienvenida_01.mp4" download>⬇ DESCARGAR</a></div></div>
 <div class="card"><span class="tag">VIDEO</span> <b>Video Mi Vida - Fijo</b><div class="btns"><a class="btn btn-ver" href="videos/biografia/Video_Biografia_Mi_Vida_01.mp4" target="_blank">▶ VER</a><a class="btn btn-down" href="videos/biografia/Video_Biografia_Mi_Vida_01.mp4" download>⬇ DESCARGAR</a></div></div>
 <div class="btns"><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/videos/biografia" target="_blank">+ CONTINUAR AGREGANDO - SUBIR MAS VIDEOS BIOGRAFIA</a></div></div>
-
 <div class="subbox"><h3>📸 FOTOS DE BIOGRAFIA - Ninez / Formacion</h3><div id="fotos-biografia">Cargando fotos...</div>
-<div class="card"><b>Foto Ninez 01</b><div class="btns"><a class="btn btn-ver" href="fotos/ninez/Foto_Biografia_Ninez_01.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="fotos/ninez/Foto_Biografia_Ninez_01.jpg" download>⬇ DESCARGAR</a></div></div>
-<div class="card"><b>Foto Formacion 01</b><div class="btns"><a class="btn btn-ver" href="fotos/formacion/Foto_Biografia_Formacion_01.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="fotos/formacion/Foto_Biografia_Formacion_01.jpg" download>⬇ DESCARGAR</a></div></div>
+<div class="card"><b>Foto Principal - image.jpg</b><div class="btns"><a class="btn btn-ver" href="image.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="image.jpg" download>⬇ DESCARGAR</a></div></div>
+<div class="card"><b>Foto Perfil - image2.jpg</b><div class="btns"><a class="btn btn-ver" href="image2.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="image2.jpg" download>⬇ DESCARGAR</a></div></div>
 <div class="btns"><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS FOTOS NINEZ / FORMACION</a></div></div>
-
 <div class="subbox"><h3>📊 GRAFICAS DE BIOGRAFIA</h3><div id="graficas-biografia">Cargando graficas...</div><div class="btns"><a class="btn btn-ver" href="graficas/Grafica_Biografia_01.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="graficas/Grafica_Biografia_01.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/graficas" target="_blank">+ AGREGAR MAS GRAFICAS</a></div></div>
 <div class="subbox"><h3>🛡 LOGOS DE BIOGRAFIA</h3><div id="logos-biografia">Cargando logos...</div><div class="btns"><a class="btn btn-ver" href="logos/Logo_EMK_01.png" target="_blank">👁 VER</a><a class="btn btn-down" href="logos/Logo_EMK_01.png" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/logos" target="_blank">+ AGREGAR MAS LOGOS</a></div></div>
 <div class="subbox"><h3>😉 GUIÑOS DE BIOGRAFIA</h3><div id="guinos-biografia">Cargando guiños...</div><div class="btns"><a class="btn btn-ver" href="guinos/Guino_Biografia_01.gif" target="_blank">👁 VER</a><a class="btn btn-down" href="guinos/Guino_Biografia_01.gif" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/guinos" target="_blank">+ AGREGAR MAS GUIÑOS</a></div></div>
@@ -102,7 +100,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <div class="subbox"><h3>📄 FORMATOS PDF DE BIOGRAFIA</h3><div id="pdf-biografia">Cargando PDF...</div><div class="btns"><a class="btn btn-ver" href="pdf/formatos-carta/Formato_Biografia_01.pdf" target="_blank">👁 VER PDF</a><a class="btn btn-down" href="pdf/formatos-carta/Formato_Biografia_01.pdf" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/pdf" target="_blank">+ AGREGAR MAS PDF</a></div></div>
 </div>
 
-<!-- ============ 2. ASAMBLEAS - TU CODIGO ORIGINAL CORREGIDO ============ -->
+<!-- 2. ASAMBLEAS -->
 <div class="sect" id="asambleas">
 <h4>🏛 ASAMBLEAS - Formatos Oficiales KANASIN CARTA</h4>
 <div class="subbox"><h3>📄 PDF ASAMBLEAS - AUTOMATICO</h3>
@@ -114,18 +112,18 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 </div>
 <div class="btns"><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/pdf" target="_blank">+ CONTINUAR AGREGANDO - SUBIR MAS PDF ASAMBLEAS</a></div></div>
 <div class="subbox"><h3>🎥 VIDEOS DE ASAMBLEAS</h3><div id="videos-asambleas">Cargando videos...</div><div class="btns"><a class="btn btn-ver" href="videos/asambleas/Video_Asamblea_01.mp4" target="_blank">▶ VER</a><a class="btn btn-down" href="videos/asambleas/Video_Asamblea_01.mp4" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/videos" target="_blank">+ AGREGAR MAS VIDEOS</a></div></div>
-<div class="subbox"><h3>📸 FOTOS / 📊 GRAFICAS / 🛡 LOGOS / 😉 GUIÑOS / 🎧 AUDIOS DE ASAMBLEAS</h3><div id="fotos-asambleas">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="fotos/asambleas/Foto_Asamblea_01.jpg" target="_blank">👁 VER FOTO</a><a class="btn btn-down" href="fotos/asambleas/Foto_Asamblea_01.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS</a></div></div>
+<div class="subbox"><h3>📸 FOTOS / 📊 GRAFICAS / 🛡 LOGOS / 😉 GUIÑOS / 🎧 AUDIOS DE ASAMBLEAS</h3><div id="fotos-asambleas">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="image5.jpg" target="_blank">👁 VER FOTO image5</a><a class="btn btn-down" href="image5.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS</a></div></div>
 </div>
 
-<!-- ============ 3. GALERIA ============ -->
+<!-- 3. GALERIA -->
 <div class="sect" id="galeria">
 <h4>🖼 GALERÍA - Kanasin, Eventos, Colonias</h4>
-<div class="subbox"><h3>📸 FOTOS DE GALERIA</h3><div id="fotos-galeria">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="fotos/galeria/Foto_Galeria_01.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="fotos/galeria/Foto_Galeria_01.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS FOTOS GALERIA</a></div></div>
+<div class="subbox"><h3>📸 FOTOS DE GALERIA</h3><div id="fotos-galeria">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="image4.jpg" target="_blank">👁 VER image4</a><a class="btn btn-down" href="image4.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS FOTOS GALERIA</a></div></div>
 <div class="subbox"><h3>🎥 VIDEOS DE GALERIA</h3><div id="videos-galeria">Cargando videos...</div><div class="btns"><a class="btn btn-ver" href="videos/galeria/Video_Galeria_01.mp4" target="_blank">▶ VER</a><a class="btn btn-down" href="videos/galeria/Video_Galeria_01.mp4" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/videos" target="_blank">+ AGREGAR MAS VIDEOS</a></div></div>
-<div class="subbox"><h3>📊 GRAFICAS / 🛡 LOGOS / 😉 GUIÑOS / 🎧 AUDIOS / 📄 PDF DE GALERIA</h3><div id="graficas-galeria">Cargando graficas...</div><div class="btns"><a class="btn btn-ver" href="graficas/Grafica_Galeria_01.jpg" target="_blank">👁 VER GRAFICA</a><a class="btn btn-down" href="graficas/Grafica_Galeria_01.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/graficas" target="_blank">+ AGREGAR MAS</a></div></div>
+<div class="subbox"><h3>📊 GRAFICAS / 🛡 LOGOS / 😉 GUIÑOS / 🎧 AUDIOS / 📄 PDF DE GALERIA</h3><div id="graficas-galeria">Cargando graficas...</div><div class="btns"><a class="btn btn-ver" href="image6.jpg" target="_blank">👁 VER image6</a><a class="btn btn-down" href="image6.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/graficas" target="_blank">+ AGREGAR MAS</a></div></div>
 </div>
 
-<!-- ============ 4. GESTIONES - TU CODIGO ORIGINAL CORREGIDO ============ -->
+<!-- 4. GESTIONES -->
 <div class="sect" id="gestiones">
 <h4>🏘 GESTIONES - Colonias y Servicios Publicos - AUTOMATICO</h4>
 <div class="subbox"><h3>🎥 VIDEOS REGENERACION - AUTOMATICO POR COLONIAS</h3><div id="videos-regeneracion">Cargando videos por colonia...</div><p>Mulchechen, Encinos, San Antonio Kaua, Villas de Oriente, Centro, etc.</p><div class="btns"><a class="btn btn-ver" href="videos/regeneracion/Video_Regeneracion_01.mp4" target="_blank">▶ VER</a><a class="btn btn-down" href="videos/regeneracion/Video_Regeneracion_01.mp4" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/videos" target="_blank">+ AGREGAR MAS VIDEOS POR COLONIA</a></div></div>
@@ -135,16 +133,16 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <div class="card"><b>🚧 Bacheo</b><div id="gestion-bacheo">Cargando...</div></div>
 <div class="card"><b>💧 Agua / 🗑️ Basura</b><div id="gestion-agua">Cargando agua...</div><div id="gestion-basura">Cargando basura...</div></div>
 </div>
-<div class="subbox"><h3>📸 FOTOS DE GESTIONES</h3><div id="fotos-gestiones">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="fotos/gestiones/Foto_Gestion_01.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="fotos/gestiones/Foto_Gestion_01.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS FOTOS GESTIONES</a></div></div>
+<div class="subbox"><h3>📸 FOTOS DE GESTIONES</h3><div id="fotos-gestiones">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="image5.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="image5.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS FOTOS GESTIONES</a></div></div>
 <div class="subbox"><h3>📊 GRAFICAS / 🛡 LOGOS / 😉 GUIÑOS / 🎧 AUDIOS / 📄 PDF DE GESTIONES</h3><div class="btns"><a class="btn btn-ver" href="pdf/formatos-carta/Anexo_Guia_Secciones_0204-0223_Kanasin_CARTA.pdf" target="_blank">👁 VER PDF 0204-0223</a><a class="btn btn-down" href="pdf/formatos-carta/Anexo_Guia_Secciones_0204-0223_Kanasin_CARTA.pdf" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/pdf" target="_blank">+ AGREGAR MAS GESTIONES</a></div></div>
 </div>
 
-<!-- ============ 5. MI COMPROMISO 4T ============ -->
+<!-- 5. MI COMPROMISO 4T -->
 <div class="sect" id="compromiso">
 <h4>✊ MI COMPROMISO 4T - Cuarta Transformacion</h4>
 <p>Mi compromiso con la Cuarta Transformacion, con Kanasin, con el pueblo.</p>
 <div class="subbox"><h3>🎥 VIDEOS MI COMPROMISO 4T</h3><div id="videos-4t">Cargando videos 4T...</div><div class="btns"><a class="btn btn-ver" href="videos/biografia/Video_Biografia_Compromiso_4T_01.mp4" target="_blank">▶ VER VIDEO 4T</a><a class="btn btn-down" href="videos/biografia/Video_Biografia_Compromiso_4T_01.mp4" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/videos" target="_blank">+ AGREGAR MAS VIDEOS 4T</a></div></div>
-<div class="subbox"><h3>📸 FOTOS 4T</h3><div id="fotos-4t">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="fotos/4t/Foto_4T_01.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="fotos/4t/Foto_4T_01.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS FOTOS 4T</a></div></div>
+<div class="subbox"><h3>📸 FOTOS 4T</h3><div id="fotos-4t">Cargando fotos...</div><div class="btns"><a class="btn btn-ver" href="image6.jpg" target="_blank">👁 VER image6</a><a class="btn btn-down" href="image6.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/fotos" target="_blank">+ AGREGAR MAS FOTOS 4T</a></div></div>
 <div class="subbox"><h3>📊 GRAFICAS 4T</h3><div id="graficas-4t">Cargando graficas...</div><div class="btns"><a class="btn btn-ver" href="graficas/Grafica_4T_01.jpg" target="_blank">👁 VER</a><a class="btn btn-down" href="graficas/Grafica_4T_01.jpg" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/graficas" target="_blank">+ AGREGAR MAS GRAFICAS 4T</a></div></div>
 <div class="subbox"><h3>🛡 LOGOS 4T</h3><div id="logos-4t">Cargando logos...</div><div class="btns"><a class="btn btn-ver" href="logos/Logo_4T_01.png" target="_blank">👁 VER</a><a class="btn btn-down" href="logos/Logo_4T_01.png" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/logos" target="_blank">+ AGREGAR MAS LOGOS 4T</a></div></div>
 <div class="subbox"><h3>😉 GUIÑOS 4T</h3><div id="guinos-4t">Cargando guiños...</div><div class="btns"><a class="btn btn-ver" href="guinos/Guino_4T_01.gif" target="_blank">👁 VER</a><a class="btn btn-down" href="guinos/Guino_4T_01.gif" download>⬇ DESCARGAR</a><a class="btn btn-add" href="https://github.com/eduardojaviermoragonzalez68-cyber/eduardojaviermoragonzalez68-cyber.github.io/upload/main/guinos" target="_blank">+ AGREGAR MAS GUIÑOS 4T</a></div></div>
@@ -195,7 +193,6 @@ async function listar(ruta, idContenedor, esVideo=false){
   });
  }catch(e){cont.innerHTML="No se pudo cargar - Revisa que la carpeta "+ruta+" exista en GitHub";}
 }
-// BIOGRAFIA
 listar("videos/biografia","videos-biografia",true);
 listar("fotos/ninez","fotos-biografia");
 listar("graficas/biografia","graficas-biografia");
@@ -203,17 +200,14 @@ listar("logos/biografia","logos-biografia");
 listar("guinos/biografia","guinos-biografia");
 listar("audios/biografia","audios-biografia");
 listar("pdf/biografia","pdf-biografia");
-// ASAMBLEAS - TU RUTA ORIGINAL CORREGIDA: asambleas-informativas / constitutivas / resolutivas
 listar("pdf/asambleas-informativas","pdf-informativa");
 listar("pdf/asambleas-constitutivas","pdf-constitutiva");
 listar("pdf/asambleas-resolutivas","pdf-resolutiva");
 listar("videos/asambleas","videos-asambleas",true);
 listar("fotos/asambleas","fotos-asambleas");
-// GALERIA
 listar("fotos/galeria","fotos-galeria");
 listar("videos/galeria","videos-galeria",true);
 listar("graficas/galeria","graficas-galeria");
-// GESTIONES - TU RUTA ORIGINAL
 listar("videos/regeneracion","videos-regeneracion",true);
 listar("colonias","colonias-lista");
 listar("gestiones/servicios-publicos/alumbrado","gestion-alumbrado");
@@ -221,7 +215,6 @@ listar("gestiones/servicios-publicos/bacheo","gestion-bacheo");
 listar("gestiones/servicios-publicos/agua","gestion-agua");
 listar("gestiones/servicios-publicos/basura","gestion-basura");
 listar("fotos/gestiones","fotos-gestiones");
-// MI COMPROMISO 4T
 listar("videos/4t","videos-4t",true);
 listar("fotos/4t","fotos-4t");
 listar("graficas/4t","graficas-4t");
