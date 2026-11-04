@@ -9,7 +9,6 @@
 body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 .wrap{max-width:800px;margin:0 auto;background:#fff}
 .topbar{background:#000;color:#ffcc00;font-size:9px;padding:5px;text-align:center;font-weight:900}
-/* BARRA NAVEGADORA DE TU OTRO REPO */
 .logo-bar{display:flex;align-items:center;padding:8px 12px;background:#fff;border-bottom:4px solid #ffcc00}
 .logo-icon{width:70px;height:70px;background:#7a0a12;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#ffcc00;font-weight:900;font-size:11px;text-align:center;border:2px solid #ffcc00}
 .logo-text{margin-left:10px}
@@ -18,7 +17,6 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 .menu{background:#7a0a12;display:flex;overflow-x:auto;white-space:nowrap;border-bottom:3px solid #ffcc00;position:sticky;top:0;z-index:999}
 .menu a{color:#fff;padding:14px 12px;font-size:11px;font-weight:900;text-decoration:none;border-right:1px solid #900;display:block;flex-shrink:0}
 .menu a:hover{background:#ffcc00;color:#7a0a12}
-
 .hero{background:#7a0a12;color:#fff;text-align:center;padding:12px 10px}
 .hero h1{font-size:23px;font-weight:900;line-height:1.1}
 .hero h2{font-size:11px;font-weight:400;margin-top:4px}
@@ -50,15 +48,10 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <body>
 <div class="wrap">
 <div class="topbar">EMK-ESTAMOS-MEJORANDO-KANASIN-24-7 | MORENA La Esperanza de Mexico | KANASIN YUCATAN | CONCIENCIA PURA 24/7</div>
-
 <div class="logo-bar">
 <div class="logo-icon">KANASIN</div>
-<div class="logo-text">
-<b>LA CAPITAL DEL PANUCHO, ES</b>
-<span>EDUARDO JAVIER MORA GONZALEZ</span>
+<div class="logo-text"><b>LA CAPITAL DEL PANUCHO, ES</b><span>EDUARDO JAVIER MORA GONZALEZ</span></div>
 </div>
-</div>
-
 <div class="menu">
 <a href="#inicio">INICIO</a>
 <a href="#biografia">BIOGRAFÍA</a>
@@ -67,17 +60,15 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <a href="#gestiones">GESTIONES</a>
 <a href="#compromiso">MI COMPROMISO 4T</a>
 </div>
-
 <div class="hero">
 <h1>EDUARDO JAVIER<br>MORA GONZALEZ</h1>
 <h2>Morita el Mototaxista - 10 AÑOS LLEVANDO A LAS FAMILIAS DE KANASIN<br>EMK - Conciencia Pura 24/7</h2>
 <div class="box-yellow">PROCESO INTERNO DE MORENA<br>ASPIRANTE A COORDINACION MUNICIPAL<br>COMITES DE DEFENSA DE LA TRANSFORMACION<br>Y SOBERANIA NACIONAL<br>REGISTRO: HASTA 18 DE OCTUBRE 2026<br>FECHA LIMITE: 13 DICIEMBRE<br>RESULTADOS: 31 DICIEMBRE 2026</div>
 <div class="sub">EL VERDADERO CAMBIO LO HACEMOS TODOS<br>CON EL PUEBLO TODO, SIN EL PUEBLO NADA</div>
 </div>
-
 <img class="img-main" src="foto-principal.jpg" alt="Eduardo Mora Mototaxi Arco Kanasin" onerror="this.src='foto.jpg'">
 <img class="img-perfil" src="foto.jpg" alt="Eduardo Javier Mora Gonzalez Guayabera" onerror="this.src='image2.jpg'">
-<img class="img-mototaxi" src="image4.jpg" alt="Mototaxi 10 anos llevando familias Kanasin Chedraui" onerror="this.style.display='none'">
+<img class="img-mototaxi" src="image4.jpg" alt="Mototaxi 10 anos llevando familias Kanasin" onerror="this.style.display='none'">
 
 <div class="content">
 <p class="title-main">Aspirante para la<br>Coordinacion de los<br>Comites de Defensa de la<br>Transformacion y Soberania Nacional</p>
@@ -127,10 +118,12 @@ body{font-family:Arial,Helvetica,sans-serif;background:#7a0a12}
 <p>Esta pagina NO promueve candidatura a cargo de eleccion popular. Es manifestacion de intencion para COORDINADOR DE ORGANIZACION DE MORENA Comites Defensa, Proceso Organizacion, Formacion y Afiliacion Art 15-20 Estatuto.</p>
 </div>
 </div>
+
 <div class="legal">
 <b>AVISO LEGAL BLINDADO - ACTIVIDAD ORDINARIA PROCESO INTERNO MORENA - NO ACTO ANTICIPADO PRECAMPAÑA</b> Documento dirigido exclusivamente a Protagonistas Cambio Verdadero. Art 196 y 198 LIPEEY actividades ordinarias no son actos anticipados. EDUARDO JAVIER MORA GONZALEZ Aspirante Coordinacion Municipal CDT Kanasin. Registro 18 Oct 2026 Limite 13 Dic 2026 Resultados 31 Dic 2026. Con el Pueblo Todo, Sin el Pueblo Nada.
 </div>
 </div>
+
 <script>
 const repo="z68-cyber/z68-cyber.github.io";
 async function listar(ruta, idContenedor, idCard, esVideo=false){
@@ -156,10 +149,13 @@ async function listar(ruta, idContenedor, idCard, esVideo=false){
   });
  }catch(e){card.style.display="none";}
 }
+// ASAMBLEAS
 listar("pdf/asambleas-informativas","pdf-informativa","card-pdfs");
 listar("pdf/asambleas-constitutivas","pdf-constitutiva","card-pdfs");
 listar("pdf/asambleas-resolutivas","pdf-resolutiva","card-pdfs");
+// VIDEOS
 listar("videos/regeneracion","videos-regeneracion","card-videos",true);
+// COLONIAS Y GESTIONES
 listar("colonias","colonias-lista","card-colonias");
 listar("gestiones/servicios-publicos/alumbrado","gestion-alumbrado","card-colonias");
 listar("gestiones/servicios-publicos/bacheo","gestion-bacheo","card-colonias");
