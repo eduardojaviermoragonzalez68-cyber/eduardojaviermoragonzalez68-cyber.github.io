@@ -9,13 +9,14 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--crema);color:var(--gris-texto);line-height:1.7}
   img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
   .cintillo-legal{background:var(--guinda-oscuro);color:#fff;text-align:center;padding:12px 16px;font-size:13px;line-height:1.5;border-bottom:2px solid var(--dorado)}
   header{background:var(--blanco);box-shadow:0 2px 10px rgba(0,0,0,.06);position:static}
   .nav-container{max-width:1140px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
   .brand-title{font-weight:800;font-size:20px;color:var(--guinda);text-transform:uppercase;line-height:1.1}
   .brand-sub{font-size:13px;color:var(--gris-suave);font-weight:600}
-  nav ul{list-style:none;display:flex;gap:14px;flex-wrap:wrap}
-  nav a{text-decoration:none;color:var(--gris-texto);font-weight:700;font-size:13px}
+  nav ul{list-style:none;display:flex;gap:12px;flex-wrap:wrap}
+  nav a{text-decoration:none;color:var(--gris-texto);font-weight:700;font-size:12px}
   .hero{background:linear-gradient(135deg,var(--guinda),var(--guinda-oscuro));color:#fff;padding:48px 20px}
   .hero-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
   .badge{display:inline-block;background:rgba(197,155,39,.2);border:1px solid var(--dorado);color:#F5D77F;padding:7px 14px;border-radius:50px;font-size:12px;font-weight:700;margin-bottom:16px;text-transform:uppercase}
@@ -43,6 +44,7 @@
   .bg-blanco{background:#fff;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
   .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   .gallery-item{border-radius:10px;overflow:hidden;border:1px solid var(--borde);background:var(--crema)}
+  .gallery-item a{display:block;text-decoration:none}
   .gallery-item img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#EFE9DC}
   .gallery-item p{padding:12px;font-size:13px;font-weight:700;color:var(--guinda);text-align:center}
   .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -53,7 +55,11 @@
   .docs-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
   .formato-preview{background:#fff;padding:16px;border-radius:12px;border:1px solid var(--borde);text-align:center}
   .formato-preview img{max-width:100%;height:auto;border-radius:8px;border:1px solid #ddd;background:#F3EAD3;margin:0 auto}
-  /* PDF ASAMBLEAS */
+  /* ASAMBLEAS */
+  .asamblea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .asamblea-card{background:#fff;border:1px solid var(--borde);border-top:6px solid var(--guinda);border-radius:12px;padding:22px;text-align:center}
+  .asamblea-card b{color:var(--guinda);font-size:17px;display:block;line-height:1.3}
+  .asamblea-card p{font-size:14px;color:#555;margin:10px 0}
   .pdf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   .pdf-item{background:#fff;border:1px solid var(--borde);border-top:5px solid var(--dorado);border-radius:12px;padding:20px;text-align:center}
   .pdf-item b{color:var(--guinda);font-size:15px;display:block;line-height:1.3}
@@ -67,7 +73,7 @@
   footer{background:var(--guinda-oscuro);color:#fff;text-align:center;padding:24px 16px;font-size:13px;line-height:1.6;clear:both}
   @media(max-width:820px){
     .hero-grid,.docs-grid,.legal-grid,.video-grid{grid-template-columns:1fr}
-    .grid-3,.pdf-grid{grid-template-columns:1fr}
+    .grid-3,.pdf-grid,.asamblea-grid{grid-template-columns:1fr}
     .gallery-grid{grid-template-columns:1fr 1fr}
     .hero h1{font-size:28px}
     nav ul{gap:10px;justify-content:center}
@@ -76,59 +82,95 @@
 </style>
 </head>
 <body>
-<div class="cintillo-legal">Página de carácter informativo y de difusión de ideas • Proceso Interno Ordinario MORENA • Kanasín, Yucatán • Secciones 0204 a 0223</div>
-<header><div class="nav-container"><div><div class="brand-title">Morita • Kanasín</div><div class="brand-sub">Eduardo Javier Mora González</div></div><nav><ul><li><a href="#inicio">INICIO</a></li><li><a href="#quien">QUIÉN SOY</a></li><li><a href="#kanasin">MI KANASÍN</a></li><li><a href="#videos">VIDEOS</a></li><li><a href="#formacion">FORMACIÓN 4T</a></li><li><a href="#formatos">FORMATOS PDF</a></li><li><a href="#marco">MARCO LEGAL</a></li><li><a href="#contacto">CONTACTO</a></li></ul></nav></div></header>
+<div class="cintillo-legal">Página de carácter informativo y de difusión de ideas • Proceso Interno Ordinario MORENA • Kanasín, Yucatán</div>
+<header><div class="nav-container"><div><div class="brand-title">Morita • Kanasín</div><div class="brand-sub">Eduardo Javier Mora González</div></div><nav><ul><li><a href="#inicio">INICIO</a></li><li><a href="#quien">QUIÉN SOY</a></li><li><a href="#kanasin">MI KANASÍN</a></li><li><a href="#videos">VIDEOS</a></li><li><a href="#formacion">FORMACIÓN 4T</a></li><li><a href="#asambleas">ASAMBLEAS</a></li><li><a href="#formatos">FORMATOS PDF</a></li><li><a href="#marco">MARCO LEGAL</a></li><li><a href="#contacto">CONTACTO</a></li></ul></nav></div></header>
 
 <!-- HERO -->
-<section class="hero" id="inicio"><div class="hero-grid"><div><span class="badge">Aspirante • Coordinación Municipal</span><h1>EDUARDO JAVIER<br>MORA GONZÁLEZ</h1><h2>Morita el Mototaxista • 10 Años en Kanasín</h2><div class="hero-meta"><b>Comités de Defensa de la Transformación y Soberanía Nacional</b><br>Municipio de Kanasín, Yucatán • Secciones 0204–0223<br>Organización de base, asambleas informativas, formación política y afiliación voluntaria.</div><div class="btn-group"><a class="btn btn-dorado" href="#quien">Conoce mi historia</a><a class="btn btn-outline" href="#contacto">Escríbeme</a></div>
+<section class="hero" id="inicio"><div class="hero-grid"><div><span class="badge">Aspirante • Coordinación Municipal</span><h1>EDUARDO JAVIER<br>MORA GONZÁLEZ</h1><h2>Morita el Mototaxista • 10 Años en Kanasín</h2><div class="hero-meta"><b>Comités de Defensa de la Transformación y Soberanía Nacional</b><br>Municipio de Kanasín, Yucatán<br>Organización de base, asambleas informativas, formación política y afiliación voluntaria.</div><div class="btn-group"><a class="btn btn-dorado" href="#quien">Conoce mi historia</a><a class="btn btn-outline" href="#contacto">Escríbeme</a></div>
 <!-- SEGUIR AGREGANDO AQUÍ - HERO -->
-</div><div class="hero-card"><img src="foto-morita.jpg" alt="Eduardo Javier Mora González Morita" onerror="this.style.display='none'"><div class="hero-card-caption">Morita • Kanasín, Yucatán</div></div></div></section>
+</div><div class="hero-card"><a href="foto-morita.jpg" target="_blank" rel="noopener"><img src="foto-morita.jpg" alt="Eduardo Javier Mora González Morita"></a><div class="hero-card-caption">Morita • Kanasín, Yucatán</div></div></div></section>
 
 <!-- QUIEN SOY -->
-<section id="quien"><div class="container"><div class="section-header"><span>01 • Quién Soy</span><h2>Mi historia es de Kanasín</h2><p>Protagonista del cambio verdadero, de base, de colonia, de mercado.</p></div><div class="grid-3"><div class="card"><h3>Mi trabajo</h3><p>Mototaxista, padre de familia, vecino de Kanasín. 10 años recorriendo las colonias.</p></div><div class="card"><h3>Mi compromiso</h3><p>Organización de base sin mentir, sin robar, sin traicionar al pueblo.</p></div><div class="card"><h3>Mi territorio</h3><p>Kanasín, Yucatán. Secciones 0204 a 0223. Escuchar y construir juntos.</p></div>
-<!-- SEGUIR AGREGANDO AQUÍ - QUIÉN SOY: COPIA UNA TARJETA <div class="card">...</div> Y PÉGALA AQUÍ -->
+<section id="quien"><div class="container"><div class="section-header"><span>01 • Quién Soy</span><h2>Mi historia es de Kanasín</h2><p>Protagonista del cambio verdadero, de base, de colonia, de mercado.</p></div><div class="grid-3"><div class="card"><h3>Mi trabajo</h3><p>Mototaxista, padre de familia, vecino de Kanasín. 10 años recorriendo las colonias.</p></div><div class="card"><h3>Mi compromiso</h3><p>Organización de base sin mentir, sin robar, sin traicionar al pueblo.</p></div><div class="card"><h3>Mi territorio</h3><p>Kanasín, Yucatán. Escuchar y construir juntos.</p></div>
+<!-- SEGUIR AGREGANDO AQUÍ - QUIÉN SOY: COPIA UNA TARJETA <div class="card">...</div> Y PÉGALA AQUÍ PARA MÁS FOTOS / TEXTOS -->
 </div></div></section>
 
-<!-- MI KANASIN -->
-<section id="kanasin" class="bg-blanco"><div class="container"><div class="section-header"><span>02 • Mi Kanasín</span><h2>Mi Kanasín en fotos</h2><p>Fotos del mercado y de la colonia. Actividad orgánica e informativa.</p></div><div class="gallery-grid">
-<div class="gallery-item"><img src="mercado1.jpg" alt="Mercado Kanasín" onerror="this.style.display='none'"><p>Mercado Municipal de Kanasín</p></div>
-<div class="gallery-item"><img src="colonia1.jpg" alt="Colonia Kanasín" onerror="this.style.display='none'"><p>Colonias de Kanasín</p></div>
-<div class="gallery-item"><img src="mercado2.jpg" alt="Calles" onerror="this.style.display='none'"><p>Calles</p></div>
-<div class="gallery-item"><img src="colonia2.jpg" alt="Colonias Rurales" onerror="this.style.display='none'"><p>Colonias Rurales</p></div>
-<!-- SEGUIR AGREGANDO AQUÍ - FOTOS: COPIA UNA LÍNEA <div class="gallery-item">...</div> Y CAMBIA NOMBRE Y FOTO -->
+<!-- MI KANASIN - 4 CASILLAS, CLIC = ABRE FOTO GRANDE -->
+<section id="kanasin" class="bg-blanco"><div class="container"><div class="section-header"><span>02 • Mi Kanasín</span><h2>Mi Kanasín en fotos</h2><p>Toca una foto para verla grande. Actividad orgánica e informativa.</p></div><div class="gallery-grid">
+<div class="gallery-item"><a href="mercado1.jpg" target="_blank" rel="noopener"><img src="mercado1.jpg" alt="Mercado Kanasín"><p>Mercado Municipal de Kanasín</p></a></div>
+<div class="gallery-item"><a href="colonia1.jpg" target="_blank" rel="noopener"><img src="colonia1.jpg" alt="Colonia Kanasín"><p>Colonias de Kanasín</p></a></div>
+<div class="gallery-item"><a href="mercado2.jpg" target="_blank" rel="noopener"><img src="mercado2.jpg" alt="Calles"><p>Calles</p></a></div>
+<div class="gallery-item"><a href="colonia2.jpg" target="_blank" rel="noopener"><img src="colonia2.jpg" alt="Colonias Rurales"><p>Colonias Rurales</p></a></div>
+<!-- SEGUIR AGREGANDO AQUÍ - FOTOS: COPIA UNA LÍNEA COMPLETA <div class="gallery-item">...</div> Y CAMBIA LOS 2 NOMBRES IGUALES + TEXTO -->
+<!-- EJEMPLO FOTO 5: <div class="gallery-item"><a href="foto5.jpg" target="_blank" rel="noopener"><img src="foto5.jpg" alt="Foto 5"><p>Mi foto 5</p></a></div> -->
 </div></div></section>
 
-<!-- VIDEOS -->
-<section id="videos"><div class="container"><div class="section-header"><span>03 • Videos</span><h2>Videos de Kanasín</h2><p>Recorridos, mensaje y trabajo de base. Actividad orgánica e informativa.</p></div><div class="video-grid">
-<div class="video-item"><video controls preload="metadata" poster="foto-morita.jpg"><source src="video-quien-soy.mp4" type="video/mp4">Tu navegador no puede reproducir el video.</video><p>Quién Soy - Morita<small>Mensaje de presentación • Kanasín</small></p></div>
-<div class="video-item"><video controls preload="metadata" poster="mercado1.jpg"><source src="video-recorrido.mp4" type="video/mp4">Tu navegador no puede reproducir el video.</video><p>Recorrido en Kanasín<small>Calles y colonias • Kanasín</small></p></div>
-<!-- SEGUIR AGREGANDO AQUÍ - VIDEOS: COPIA UN BLOQUE <div class="video-item">...</div> Y CAMBIA video-xxx.mp4 -->
-</div></div></section>
+<!-- VIDEOS - SUBE VIDEO Y SE REPRODUCE EN AUTOMÁTICO -->
+<section id="videos"><div class="container"><div class="section-header"><span>03 • Videos</span><h2>Videos de Kanasín</h2><p>Sube tu video a GitHub con nombre en minúsculas y se reproduce solo, sin sonido. Toca para activar sonido.</p></div><div class="video-grid">
+<div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" poster="foto-morita.jpg"><source src="video-quien-soy.mp4" type="video/mp4">Tu navegador no puede reproducir el video.</video><p>Quién Soy - Morita<small>Mensaje de presentación • Kanasín</small></p></div>
+<div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" poster="mercado1.jpg"><source src="video-recorrido.mp4" type="video/mp4">Tu navegador no puede reproducir el video.</video><p>Recorrido en Kanasín<small>Calles y colonias • Kanasín</small></p></div>
+<!-- SEGUIR AGREGANDO AQUÍ - VIDEOS: COPIA UN BLOQUE COMPLETO <div class="video-item">...</div> Y CAMBIA video-xxx.mp4 + TÍTULO -->
+<!-- EJEMPLO VIDEO 3: <div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" poster="foto-morita.jpg"><source src="video-3.mp4" type="video/mp4"></video><p>Mi Video 3<small>Descripción</small></p></div> -->
+</div>
+<p style="text-align:center;color:#777;font-size:13px;margin-top:18px">Para agregar otro video, súbelo como <b>video-3.mp4</b>, <b>video-4.mp4</b>, etc. y copia un cuadrito de arriba.</p>
+</div></section>
 
 <!-- FORMACION -->
-<section id="formacion" class="bg-blanco"><div class="container"><div class="section-header"><span>04 • Formación 4T</span><h2>Libros y cuadernos de formación</h2><p>Material de estudio, formación política y organización comunitaria.</p></div><div class="docs-grid"><div class="formato-preview"><img src="libros-formacion.jpg" alt="Libros Formación 4T" onerror="this.style.display='none'"><p style="margin-top:12px;font-weight:700;color:var(--guinda)">Documentos Básicos y Cuadernos de Formación</p></div><div><h3 style="color:var(--guinda);margin-bottom:12px">¿Qué estudiamos?</h3><p style="color:#555;font-size:15px">Declaración de Principios, Programa y Estatuto de MORENA. Formación política para la organización comunitaria.</p><br><a class="btn btn-dorado" href="https://morena.org" target="_blank" rel="noopener">Visitar página oficial de MORENA →</a>
-<!-- SEGUIR AGREGANDO AQUÍ - FORMACIÓN -->
+<section id="formacion" class="bg-blanco"><div class="container"><div class="section-header"><span>04 • Formación 4T</span><h2>Libros y cuadernos de formación</h2><p>Material de estudio, formación política y organización comunitaria.</p></div><div class="docs-grid"><div class="formato-preview"><a href="libros-formacion.jpg" target="_blank" rel="noopener"><img src="libros-formacion.jpg" alt="Libros Formación 4T"></a><p style="margin-top:12px;font-weight:700;color:var(--guinda)">Documentos Básicos y Cuadernos de Formación</p></div><div><h3 style="color:var(--guinda);margin-bottom:12px">¿Qué estudiamos?</h3><p style="color:#555;font-size:15px">Declaración de Principios, Programa y Estatuto de MORENA. Formación política para la organización comunitaria.</p><br><a class="btn btn-dorado" href="https://morena.org" target="_blank" rel="noopener">Visitar página oficial de MORENA →</a>
+<!-- SEGUIR AGREGANDO AQUÍ - FORMACIÓN: MÁS FOTOS / PDF / VIDEOS -->
 </div></div></div></section>
 
+<!-- ASAMBLEAS DE MORENA - 3 TIPOS -->
+<section id="asambleas"><div class="container"><div class="section-header"><span>05 • Asambleas de MORENA</span><h2>Asambleas de MORENA</h2><p>Las 3 asambleas de organización de base. Actividad orgánica e informativa.</p></div><div class="asamblea-grid">
+<div class="asamblea-card"><b>1. Asambleas Informativas</b><p>Reuniones abiertas para informar, escuchar y organizar a vecinos y simpatizantes. Sin promesas ni entrega de apoyos.</p><a class="btn-chico" href="asamblea-informativa.pdf" target="_blank" rel="noopener">Ver PDF Informativa</a>
+<!-- SEGUIR AGREGANDO AQUÍ - ASAMBLEA INFORMATIVA: MÁS FOTOS / VIDEOS / PDF -->
+</div>
+<div class="asamblea-card"><b>2. Asambleas Constitutivas</b><p>Asambleas para constituir y organizar Comités de Defensa de la Transformación y Soberanía Nacional en Kanasín.</p><a class="btn-chico" href="asamblea-constitutiva.pdf" target="_blank" rel="noopener">Ver PDF Constitutiva</a>
+<!-- SEGUIR AGREGANDO AQUÍ - ASAMBLEA CONSTITUTIVA: MÁS FOTOS / VIDEOS / PDF -->
+</div>
+<div class="asamblea-card"><b>3. Asambleas Resolutivas</b><p>Asambleas para tomar acuerdos, definir tareas y resoluciones de organización interna, con acta y lista de asistencia.</p><a class="btn-chico" href="asamblea-resolutiva.pdf" target="_blank" rel="noopener">Ver PDF Resolutiva</a>
+<!-- SEGUIR AGREGANDO AQUÍ - ASAMBLEA RESOLUTIVA: MÁS FOTOS / VIDEOS / PDF -->
+</div>
+<!-- SEGUIR AGREGANDO AQUÍ - ASAMBLEAS: COPIA UN BLOQUE <div class="asamblea-card">...</div> PARA OTRA ASAMBLEA -->
+</div></div></section>
+
 <!-- FORMATOS PDF ASAMBLEAS -->
-<section id="formatos"><div class="container"><div class="section-header"><span>05 • Formatos PDF Asambleas</span><h2>Formatos de Asambleas</h2><p>Formatos informativos para organización interna de base. Para descargar e imprimir.</p></div><div class="pdf-grid">
-<div class="pdf-item"><b>📄 Convocatoria de Asamblea</b><p>Formato de convocatoria informativa</p><a class="btn-chico" href="convocatoria-asamblea.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a></div>
-<div class="pdf-item"><b>📋 Lista de Asistencia</b><p>Registro de asistencia a asamblea</p><a class="btn-chico" href="lista-asistencia.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a></div>
-<div class="pdf-item"><b>📝 Acta de Asamblea</b><p>Formato de acta de asamblea informativa</p><a class="btn-chico" href="acta-asamblea.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a></div>
-<div class="pdf-item"><b>📕 Orden del Día</b><p>Guía de orden del día de asamblea</p><a class="btn-chico" href="orden-del-dia.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a></div>
-<!-- SEGUIR AGREGANDO AQUÍ - PDF: COPIA UN BLOQUE <div class="pdf-item">...</div> Y CAMBIA NOMBRE Y archivo.pdf -->
+<section id="formatos" class="bg-blanco"><div class="container"><div class="section-header"><span>06 • Formatos PDF Asambleas</span><h2>Formatos de Asambleas</h2><p>Formatos informativos para organización interna de base. Toca para ver / descargar PDF.</p></div><div class="pdf-grid">
+<div class="pdf-item"><b>📄 Convocatoria de Asamblea</b><p>Formato de convocatoria informativa</p><a class="btn-chico" href="convocatoria-asamblea.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a>
+<!-- SEGUIR AGREGANDO AQUÍ - PDF CONVOCATORIA -->
+</div>
+<div class="pdf-item"><b>📋 Lista de Asistencia</b><p>Registro de asistencia a asamblea</p><a class="btn-chico" href="lista-asistencia.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a>
+<!-- SEGUIR AGREGANDO AQUÍ - PDF LISTA -->
+</div>
+<div class="pdf-item"><b>📝 Acta de Asamblea</b><p>Formato de acta de asamblea</p><a class="btn-chico" href="acta-asamblea.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a>
+<!-- SEGUIR AGREGANDO AQUÍ - PDF ACTA -->
+</div>
+<div class="pdf-item"><b>📕 Orden del Día</b><p>Guía de orden del día de asamblea</p><a class="btn-chico" href="orden-del-dia.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a>
+<!-- SEGUIR AGREGANDO AQUÍ - PDF ORDEN DEL DÍA -->
+</div>
+<!-- SEGUIR AGREGANDO AQUÍ - PDF: COPIA UN BLOQUE <div class="pdf-item">...</div> Y CAMBIA TÍTULO + archivo.pdf -->
+<!-- EJEMPLO PDF 5: <div class="pdf-item"><b>📄 Mi Nuevo Formato</b><p>Descripción</p><a class="btn-chico" href="mi-formato.pdf" target="_blank" rel="noopener">Ver / Descargar PDF</a></div> -->
+<!-- SEGUIR AGREGANDO AQUÍ - VIDEOS + PDFS JUNTOS -->
 </div>
 <p style="text-align:center;color:#777;font-size:13px;margin-top:20px">Para agregar otro PDF, súbelo a GitHub con nombre en minúsculas y sin espacios, ejemplo: <b>mi-formato.pdf</b> y copia un cuadrito de arriba.</p>
 </div></section>
 
 <!-- MARCO LEGAL -->
-<section id="marco" class="bg-blanco"><div class="container"><div class="section-header"><span>06 • Marco Normativo</span><h2>Marco normativo y blindaje jurídico</h2><p>Actividad orgánica e informativa, sin promesas ni entrega de apoyos.</p></div><div class="legal-grid"><div class="legal-card"><h3>1. MORENA</h3><ul><li>Declaración de Principios y Programa</li><li>Estatuto: Art. 5 y 13, Art. 15 al 20, Art. 24, 33, 41 Bis, 44 y 44 Bis</li></ul></div><div class="legal-card"><h3>2. Federal • CPEUM, INE, LGPP y LGIPE</h3><ul><li>CPEUM: Art. 6, 7, 8, 9, 35, 41 Base I, 115 y 134</li><li>LGPP: Art. 2, 3, 23, 25, 34 y 35 • LGIPE: Art. 3, 196, 198, 209, 211, 242</li></ul></div><div class="legal-card"><h3>3. Estatal • Yucatán e IEPAC</h3><ul><li>Constitución de Yucatán: Art. 16, 20, 73, 76 y 77</li><li>LIPEEY: Art. 3, 196 a 206, 211, 228 y 242</li></ul></div><div class="legal-card"><h3>4. Municipal • Ley de Gobierno de los Municipios</h3><ul><li>Art. 1, 2, 7, 30, 55, 77, 82 y 86</li><li>Este sitio no sustituye trámites oficiales ni emite promesas de obra pública.</li></ul></div>
-<!-- SEGUIR AGREGANDO AQUÍ - MARCO LEGAL -->
+<section id="marco"><div class="container"><div class="section-header"><span>07 • Marco Normativo</span><h2>Marco normativo y blindaje jurídico</h2><p>Actividad orgánica e informativa, sin promesas ni entrega de apoyos.</p></div><div class="legal-grid"><div class="legal-card"><h3>1. MORENA</h3><ul><li>Declaración de Principios y Programa</li><li>Estatuto: Art. 5 y 13, Art. 15 al 20, Art. 24, 33, 41 Bis, 44 y 44 Bis</li></ul>
+<!-- SEGUIR AGREGANDO AQUÍ - MORENA -->
+</div><div class="legal-card"><h3>2. Federal • CPEUM, INE, LGPP y LGIPE</h3><ul><li>CPEUM: Art. 6, 7, 8, 9, 35, 41 Base I, 115 y 134</li><li>LGPP: Art. 2, 3, 23, 25, 34 y 35 • LGIPE: Art. 3, 196, 198, 209, 211, 242</li></ul>
+<!-- SEGUIR AGREGANDO AQUÍ - FEDERAL -->
+</div><div class="legal-card"><h3>3. Estatal • Yucatán e IEPAC</h3><ul><li>Constitución de Yucatán: Art. 16, 20, 73, 76 y 77</li><li>LIPEEY: Art. 3, 196 a 206, 211, 228 y 242</li></ul>
+<!-- SEGUIR AGREGANDO AQUÍ - ESTATAL -->
+</div><div class="legal-card"><h3>4. Municipal • Ley de Gobierno de los Municipios</h3><ul><li>Art. 1, 2, 7, 30, 55, 77, 82 y 86</li><li>Este sitio no sustituye trámites oficiales ni emite promesas de obra pública.</li></ul>
+<!-- SEGUIR AGREGANDO AQUÍ - MUNICIPAL -->
+</div>
+<!-- SEGUIR AGREGANDO AQUÍ - MARCO LEGAL: COPIA UN <div class="legal-card">...</div> PARA OTRA LEY -->
 </div></div></section>
 
 <!-- CONTACTO -->
-<section id="contacto"><div class="container"><div class="form-box"><h2 style="color:var(--guinda);margin-bottom:10px">Contacto</h2><p>Escríbeme por Facebook / WhatsApp — Kanasín, Yucatán.<br>Esta página es informativa. No se ofrecen alimentos, apoyos materiales o programas. No existe buzón de quejas ni formatos oficiales.</p><br><a class="btn btn-dorado" href="https://facebook.com" target="_blank" rel="noopener">Ir a Facebook</a>
-<!-- SEGUIR AGREGANDO AQUÍ - CONTACTO -->
+<section id="contacto" class="bg-blanco"><div class="container"><div class="form-box"><h2 style="color:var(--guinda);margin-bottom:10px">Contacto</h2><p>Escríbeme por Facebook / WhatsApp — Kanasín, Yucatán.<br>Esta página es informativa. No se ofrecen alimentos, apoyos materiales o programas. No existe buzón de quejas ni formatos oficiales.</p><br><a class="btn btn-dorado" href="https://facebook.com" target="_blank" rel="noopener">Ir a Facebook</a>
+<!-- SEGUIR AGREGANDO AQUÍ - CONTACTO: MÁS FOTOS / VIDEOS / LINKS -->
 </div></div></section>
 
 <footer><b>AVISO LEGAL INFORMATIVO</b><br>Esta página es de carácter informativo y de difusión de ideas. No promueve candidaturas, no constituye propaganda electoral ni realiza actos anticipados de precampaña o campaña. No se realizan promesas ni compromisos de programas sociales. Kanasín, Yucatán.<br><br>© 2024 Eduardo Javier Mora González • Morita el Mototaxista • Hecho en Kanasín, Yucatán • Operación a costo cero, sin pauta digital ni financiamiento externo.</footer>
