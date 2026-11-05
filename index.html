@@ -1,151 +1,391 @@
-html<!DOCTYPE html>
+html
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eduardo Javier Mora González - Morita el Mototaxista - Kanasín</title>
-<style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-  body{background:#fff;color:#222}
-  header{background:#6b0f2a;color:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-  header .logo{font-weight:900;font-size:22px;line-height:1}
-  header .logo span{color:#d4af5a}
-  nav a{color:#fff;text-decoration:none;margin:0 10px;font-weight:700;font-size:14px}
-  nav a:hover{color:#d4af5a}
-  .hero{display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding:40px 5%;background:linear-gradient(90deg,#fff 50%,#fdf6e8 50%)}
-  .hero-text{flex:1;min-width:280px}
-  .hero-text h1{font-size:42px;line-height:1;color:#3a0a1a;text-transform:uppercase}
-  .hero-text h2{font-size:32px;color:#b9973a;margin:8px 0}
-  .hero-text h3{font-size:20px}
-  .hero-text p{margin:10px 0;color:#555}
-  .btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:800;margin:6px 6px 0 0}
-  .btn-guinda{background:#6b0f2a;color:#fff}
-  .btn-borde{border:2px solid #b9973a;color:#6b0f2a}
-  .hero-img{flex:1;min-width:280px;text-align:center}
-  .hero-img img{width:320px;height:320px;object-fit:cover;border-radius:50%;border:6px solid #d4af5a}
-  .hero-img small{display:block;margin-top:8px;color:#777}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:30px 5%}
-  .card{border:1px solid #eee;border-radius:14px;padding:20px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
-  .card h3{font-size:22px;margin-bottom:6px}
-  .card p{color:#555;line-height:1.5;font-size:15px}
-  .card img{width:100%;border-radius:10px;margin:10px 0}
-  .fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .fotos img{height:110px;object-fit:cover}
-  .legal{background:#f7f7f7;padding:24px 5%;text-align:center}
-  .legal-box{max-width:900px;margin:auto;border:1px solid #d4af5a;background:#fff;padding:16px;border-radius:10px;font-size:13px;line-height:1.6;color:#444}
-  .marco{padding:0 5% 30px}
-  .marco h2{font-size:26px;color:#6b0f2a;margin:20px 0 10px}
-  .marco h4{margin:14px 0 6px;color:#333}
-  .marco ul{margin-left:18px;line-height:1.6;color:#444;font-size:14px}
-  footer{text-align:center;padding:16px;font-size:13px;color:#777}
-  @media(max-width:700px){.hero-text h1{font-size:30px}.hero-text h2{font-size:24px}.hero-img img{width:260px;height:260px}}
-</style>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Javier Mora González | Proceso Interno Ordinario MORENA — Kanasín</title>
+    <style>
+        :root {
+            --guinda: #6A1B27;
+            --guinda-oscuro: #4A1019;
+            --dorado: #C59B27;
+            --crema: #FAF8F5;
+            --gris-texto: #2D2D2D;
+            --gris-suave: #666666;
+            --blanco: #FFFFFF;
+            --borde: #E5E0D8;
+        }
 
-<header>
-  <div class="logo">Morita<br><span>Kanasín</span></div>
-  <nav>
-    <a href="#inicio">INICIO</a>
-    <a href="#quien">QUIÉN SOY</a>
-    <a href="#kanasin">MI KANASÍN</a>
-    <a href="#formacion">FORMACIÓN 4T</a>
-    <a href="#contacto">CONTACTO</a>
-  </nav>
-</header>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<section class="hero" id="inicio">
-  <div class="hero-text">
-    <h1>Eduardo Javier<br>Mora González</h1>
-    <h2>Morita el Mototaxista</h2>
-    <h3>10 AÑOS EN KANASÍN</h3>
-    <p>Aspirante a Coordinación Municipal • Comités de Defensa de la Transformación • Kanasín, Yucatán</p>
-    <p>Secciones Electorales 0204 a 0223</p>
-    <a class="btn btn-guinda" href="#quien">Conoce mi historia</a>
-    <a class="btn btn-borde" href="#contacto">Escríbeme</a>
-  </div>
-  <div class="hero-img">
-    <!-- Cambia esta foto por tu foto real -->
-    <img src="foto-morita.jpg" alt="Eduardo Javier Mora González Morita">
-    <small>Foto: Morita en Kanasín, Yucatán</small>
-  </div>
-</section>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--crema);
+            color: var(--gris-texto);
+            line-height: 1.6;
+        }
 
-<section class="grid">
-  <div class="card" id="quien">
-    <h3>01 — QUIÉN SOY</h3>
-    <p><b>Video de 1 minuto</b></p>
-    <img src="video-quien-soy.jpg" alt="Video Quién Soy">
-    <p>Conoce mi historia, mi trabajo como mototaxista y mi compromiso con Kanasín. Soy protagonista del cambio verdadero, de base, de colonia, de mercado.</p>
-  </div>
+        /* Cintillo Superior de Blindaje Electoral */
+        .cintillo-legal {
+            background-color: var(--guinda-oscuro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.82rem;
+            letter-spacing: 0.3px;
+            border-bottom: 2px solid var(--dorado);
+        }
 
-  <div class="card" id="kanasin">
-    <h3>02 — MI KANASÍN EN FOTOS</h3>
-    <p>Fotos del mercado y colonia</p>
-    <div class="fotos">
-      <img src="mercado1.jpg" alt="Mercado Kanasín">
-      <img src="colonia1.jpg" alt="Colonia Kanasín">
-      <img src="mercado2.jpg" alt="Mercado Kanasín">
-      <img src="colonia2.jpg" alt="Colonia Kanasín">
-    </div>
-    <p>Recorridos por el municipio para escuchar y construir juntos. Actividad orgánica e informativa.</p>
-  </div>
+        /* Navegación */
+        header {
+            background-color: var(--blanco);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-  <div class="card" id="formacion">
-    <h3>03 — FORMACIÓN 4T</h3>
-    <p>Libros y cuadernos de formación</p>
-    <img src="libros-formacion.jpg" alt="Libros Formación 4T">
-    <p>Material de estudio, formación política y organización comunitaria. Documentos Básicos y Cuadernos de Formación de MORENA.</p>
-    <a class="btn btn-guinda" href="https://morena.org" target="_blank" rel="noopener">Visitar página oficial de MORENA →</a>
-  </div>
-</section>
+        .nav-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-<section class="marco">
-  <h2>Proceso Interno Ordinario de MORENA — Kanasín, Yucatán</h2>
-  <p style="color:#555;line-height:1.6">Coordinación de los Comités de Defensa de la Transformación y Soberanía Nacional. Carácter de la participación: Aspirante en Proceso Interno Ordinario. Ámbito territorial: Municipio de Kanasín, Yucatán, Secciones 0204–0223. Naturaleza de los trabajos: Organización de base, asambleas informativas, formación política, afiliación voluntaria y diagnóstico territorial interno.</p>
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
 
-  <h4>1. Normativa Interna de MORENA</h4>
-  <ul>
-    <li>Declaración de Principios y Programa: Ética de servicio sin mentir, robar o traicionar al pueblo.</li>
-    <li>Estatuto de MORENA: Artículos 5 y 13 (derechos y afiliación voluntaria); Artículos 15 al 20 (integración de Comités de Defensa de la Transformación); Artículos 24, 33, 41 Bis, 44 y 44 Bis (procesos internos ordinarios y padrón de protagonistas).</li>
-  </ul>
+        .brand-title {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--guinda);
+            text-transform: uppercase;
+        }
 
-  <h4>2. Nivel Federal — Constitución, INE y Leyes Generales</h4>
-  <ul>
-    <li>CPEUM: Artículos 6, 7, 8, 9 (libertades de expresión, petición y asociación); Artículo 35 (derechos político-electorales); Artículo 41 Base I (autodeterminación de partidos políticos); Artículo 115 (municipio libre); Artículo 134 (uso imparcial de recursos — operación a costo cero sin recursos públicos o privados).</li>
-    <li>LGPP y LGIPE: Los procesos internos y la formación de comités son actividades ordinarias permanentes (Artículos 2, 3, 23, 25, 34 y 35 de la LGPP). Conforme a la LGIPE (Artículos 3, 196, 198, 209, 211, 242) y el Reglamento de Fiscalización del INE, no existen actos anticipados al carecer de un llamado expreso al voto dirigido al electorado general ni entrega de dádivas.</li>
-  </ul>
+        .brand-sub {
+            font-size: 0.78rem;
+            color: var(--gris-suave);
+            font-weight: 600;
+        }
 
-  <h4>3. Nivel Estatal — Yucatán e IEPAC</h4>
-  <ul>
-    <li>Constitución de Yucatán: Artículos 16, 20, 73, 76 y 77 en materia de derechos políticos y régimen municipal.</li>
-    <li>IEPAC (LIPEEY y Reglamento de Selecciones): Artículos 3, 196 a 206, 211, 228 y 242 distinguen la vida orgánica de los partidos frente a los procesos de selección de candidaturas constitucionales.</li>
-    <li>Participación Ciudadana: Ley estatal de la materia y principios de organización vecinal pacífica.</li>
-  </ul>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-  <h4>4. Nivel Municipal — Ley de Gobierno de los Municipios del Estado de Yucatán</h4>
-  <ul>
-    <li>Ley de Gobierno de los Municipios (Artículos 1, 2, 7, 30, 55, 77, 82 y 86): Reconoce la autonomía de Kanasín y reserva la prestación de servicios públicos al H. Ayuntamiento. Este sitio es de carácter analítico interno y no sustituye trámites oficiales ni emite promesas de obra pública.</li>
-  </ul>
+        nav a {
+            text-decoration: none;
+            color: var(--gris-texto);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
 
-  <h4>Transparencia</h4>
-  <ul>
-    <li>Archivos: <b>index.html</b>, material gráfico de asambleas, carpetas <b>pdf/</b> y <b>videos/</b> con registros de formación interna.</li>
-    <li>Operación técnica: Alojado en GitHub Pages a costo cero ($0.00 MXN), sin pauta digital ni financiamiento externo.</li>
-  </ul>
-</section>
+        nav a:hover {
+            color: var(--guinda);
+        }
 
-<section class="legal" id="contacto">
-  <div class="legal-box">
-    <b>AVISO LEGAL INFORMATIVO</b><br>
-    Esta página es de carácter informativo y de difusión de ideas. No se ofrecen alimentos, apoyos materiales o programas. No existe buzón de quejas ni formatos oficiales. No se realizan promesas ni compromisos de programas sociales. No promueve candidaturas, no constituye propaganda electoral ni realiza actos anticipados de precampaña o campaña. Kanasín, Yucatán.
-  </div>
-  <p style="margin-top:12px">Contacto: Escríbeme por Facebook / WhatsApp — Kanasín, Yucatán</p>
-</section>
+        /* Hero Principal */
+        .hero {
+            background: linear-gradient(135deg, var(--guinda) 0%, var(--guinda-oscuro) 100%);
+            color: var(--blanco);
+            padding: 60px 20px;
+        }
 
-<footer>
-  © 2024 Eduardo Javier Mora González • Morita el Mototaxista • Hecho en Kanasín, Yucatán • Diseño guinda / blanco / dorado
-</footer>
+        .hero-grid {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 40px;
+            align-items: center;
+        }
 
-</body>
-</html>
+        .badge {
+            display: inline-block;
+            background-color: rgba(197, 155, 39, 0.2);
+            border: 1px solid var(--dorado);
+            color: #F5D77F;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #F0E6D2;
+            margin-bottom: 20px;
+        }
+
+        .hero-meta {
+            background-color: rgba(0, 0, 0, 0.25);
+            padding: 15px 20px;
+            border-left: 4px solid var(--dorado);
+            border-radius: 4px;
+            font-size: 0.92rem;
+            margin-bottom: 25px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.92rem;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.15s, opacity 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+
+        .btn-dorado {
+            background-color: var(--dorado);
+            color: var(--guinda-oscuro);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--blanco);
+            color: var(--blanco);
+        }
+
+        .hero-card {
+            background-color: var(--blanco);
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            color: var(--gris-texto);
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hero-card-caption {
+            padding: 12px 5px 5px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--guinda);
+        }
+
+        /* Contenedores Generales */
+        section {
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 40px;
+        }
+
+        .section-header span {
+            color: var(--dorado);
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header h2 {
+            color: var(--guinda);
+            font-size: 1.9rem;
+            margin: 6px 0 12px;
+        }
+
+        .section-header p {
+            color: var(--gris-suave);
+            font-size: 0.98rem;
+        }
+
+        /* Tarjetas de Perfil y Ejes Orgánicos */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--blanco);
+            border: 1px solid var(--borde);
+            border-radius: 10px;
+            padding: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .card h3 {
+            color: var(--guinda);
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        /* Galería Territorial */
+        .bg-blanco {
+            background-color: var(--blanco);
+            border-top: 1px solid var(--borde);
+            border-bottom: 1px solid var(--borde);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--borde);
+            background-color: var(--crema);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item p {
+            padding: 10px 12px;
+            font-size: 0.83rem;
+            font-weight: 600;
+            color: var(--guinda);
+            text-align: center;
+        }
+
+        /* Repositorio y Formatos */
+        .docs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .formato-preview {
+            background: var(--blanco);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--borde);
+            text-align: center;
+        }
+
+        .formato-preview img {
+            max-width: 100%;
+            max-height: 360px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        /* Buzón de Diagnóstico Territorial Interno */
+        .form-box {
+            background-color: var(--blanco);
+            border: 1px solid var(--borde);
+            border-top: 5px solid var(--guinda);
+            border-radius: 10px;
+            padding: 35px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 700;
+            font-size: 0.88rem;
+            margin-bottom: 6px;
+            color: var(--guinda-oscuro);
+        }
+
+        input, select, textarea {
+            padding: 11px 14px;
+            border: 1px solid #CCC;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--guinda);
+        }
+
+        .constancia-resultado {
+            display: none;
+            margin-top: 25px;
+            padding: 25px;
+            background-color: #FDF9F0;
+            border: 2px dashed var(--dorado);
+            border-radius: 8px;
+        }
+
+        /* Acordeón Marco Jurídico */
+        .legal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .legal-card {
+            background-color: var(--blanco);
+            border-left: 5px solid var(--guinda);
+            padding: 22px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
