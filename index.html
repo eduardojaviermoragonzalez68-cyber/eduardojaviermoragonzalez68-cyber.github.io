@@ -1,130 +1,151 @@
-
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proceso Interno Ordinario de MORENA — Kanasín, Yucatán</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            border-top: 6px solid #7B1E2B;
-        }
-        h1 {
-            color: #7B1E2B;
-            font-size: 1.8em;
-            margin-bottom: 5px;
-        }
-        h2 {
-            color: #444;
-            font-size: 1.3em;
-            margin-top: 25px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #7B1E2B;
-            font-size: 1.1em;
-            margin-top: 18px;
-        }
-        blockquote {
-            background-color: #fdf3f4;
-            border-left: 5px solid #7B1E2B;
-            margin: 20px 0;
-            padding: 15px 20px;
-            border-radius: 4px;
-        }
-        hr {
-            border: 0;
-            border-top: 1px solid #ddd;
-            margin: 25px 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        code {
-            background-color: #f0f0f0;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: Consolas, Monaco, monospace;
-            font-size: 0.9em;
-            color: #b01c2e;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eduardo Javier Mora González - Morita el Mototaxista - Kanasín</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+  body{background:#fff;color:#222}
+  header{background:#6b0f2a;color:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+  header .logo{font-weight:900;font-size:22px;line-height:1}
+  header .logo span{color:#d4af5a}
+  nav a{color:#fff;text-decoration:none;margin:0 10px;font-weight:700;font-size:14px}
+  nav a:hover{color:#d4af5a}
+  .hero{display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding:40px 5%;background:linear-gradient(90deg,#fff 50%,#fdf6e8 50%)}
+  .hero-text{flex:1;min-width:280px}
+  .hero-text h1{font-size:42px;line-height:1;color:#3a0a1a;text-transform:uppercase}
+  .hero-text h2{font-size:32px;color:#b9973a;margin:8px 0}
+  .hero-text h3{font-size:20px}
+  .hero-text p{margin:10px 0;color:#555}
+  .btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:800;margin:6px 6px 0 0}
+  .btn-guinda{background:#6b0f2a;color:#fff}
+  .btn-borde{border:2px solid #b9973a;color:#6b0f2a}
+  .hero-img{flex:1;min-width:280px;text-align:center}
+  .hero-img img{width:320px;height:320px;object-fit:cover;border-radius:50%;border:6px solid #d4af5a}
+  .hero-img small{display:block;margin-top:8px;color:#777}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:30px 5%}
+  .card{border:1px solid #eee;border-radius:14px;padding:20px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+  .card h3{font-size:22px;margin-bottom:6px}
+  .card p{color:#555;line-height:1.5;font-size:15px}
+  .card img{width:100%;border-radius:10px;margin:10px 0}
+  .fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .fotos img{height:110px;object-fit:cover}
+  .legal{background:#f7f7f7;padding:24px 5%;text-align:center}
+  .legal-box{max-width:900px;margin:auto;border:1px solid #d4af5a;background:#fff;padding:16px;border-radius:10px;font-size:13px;line-height:1.6;color:#444}
+  .marco{padding:0 5% 30px}
+  .marco h2{font-size:26px;color:#6b0f2a;margin:20px 0 10px}
+  .marco h4{margin:14px 0 6px;color:#333}
+  .marco ul{margin-left:18px;line-height:1.6;color:#444;font-size:14px}
+  footer{text-align:center;padding:16px;font-size:13px;color:#777}
+  @media(max-width:700px){.hero-text h1{font-size:30px}.hero-text h2{font-size:24px}.hero-img img{width:260px;height:260px}}
+</style>
 </head>
 <body>
 
-<div class="container">
-    <h1>PROCESO INTERNO ORDINARIO DE MORENA — KANASÍN, YUCATÁN</h1>
-    <h2>Coordinación de los Comités de Defensa de la Transformación y Soberanía Nacional</h2>
+<header>
+  <div class="logo">Morita<br><span>Kanasín</span></div>
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#quien">QUIÉN SOY</a>
+    <a href="#kanasin">MI KANASÍN</a>
+    <a href="#formacion">FORMACIÓN 4T</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+</header>
 
-    <blockquote>
-        <p><strong>AVISO LEGAL Y ESTATUTARIO:</strong> Este repositorio y sitio web en GitHub Pages (<code>eduardojaviermoragonzalez68-cyber.github.io</code>) funcionan como un canal de comunicación estrictamente <strong>orgánico e informativo</strong>, orientado a la militancia de <strong>MORENA</strong> en Kanasín, Yucatán (Secciones Electorales <strong>0204 a 0223</strong>).<br>
-        <strong>NO</strong> promueve candidaturas, <strong>NO</strong> constituye propaganda electoral ni realiza actos anticipados de precampaña o campaña.</p>
-    </blockquote>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h1>Eduardo Javier<br>Mora González</h1>
+    <h2>Morita el Mototaxista</h2>
+    <h3>10 AÑOS EN KANASÍN</h3>
+    <p>Aspirante a Coordinación Municipal • Comités de Defensa de la Transformación • Kanasín, Yucatán</p>
+    <p>Secciones Electorales 0204 a 0223</p>
+    <a class="btn btn-guinda" href="#quien">Conoce mi historia</a>
+    <a class="btn btn-borde" href="#contacto">Escríbeme</a>
+  </div>
+  <div class="hero-img">
+    <!-- Cambia esta foto por tu foto real -->
+    <img src="foto-morita.jpg" alt="Eduardo Javier Mora González Morita">
+    <small>Foto: Morita en Kanasín, Yucatán</small>
+  </div>
+</section>
 
-    <hr>
+<section class="grid">
+  <div class="card" id="quien">
+    <h3>01 — QUIÉN SOY</h3>
+    <p><b>Video de 1 minuto</b></p>
+    <img src="video-quien-soy.jpg" alt="Video Quién Soy">
+    <p>Conoce mi historia, mi trabajo como mototaxista y mi compromiso con Kanasín. Soy protagonista del cambio verdadero, de base, de colonia, de mercado.</p>
+  </div>
 
-    <h2>📌 Datos del Aspirante y Actividad Orgánica</h2>
-    <ul>
-        <li><strong>Protagonista del Cambio Verdadero:</strong> Eduardo Javier Mora González (<em>Morita</em>)</li>
-        <li><strong>Carácter de la participación:</strong> Aspirante en el Proceso Interno Ordinario para la Coordinación Municipal de los Comités de Defensa de la Transformación y Soberanía Nacional.</li>
-        <li><strong>Ámbito Territorial:</strong> Municipio de Kanasín, Yucatán (Secciones 0204–0223).</li>
-        <li><strong>Naturaleza de los trabajos:</strong> Organización de base, asambleas informativas, formación política, afiliación voluntaria y diagnóstico territorial interno.</li>
-    </ul>
+  <div class="card" id="kanasin">
+    <h3>02 — MI KANASÍN EN FOTOS</h3>
+    <p>Fotos del mercado y colonia</p>
+    <div class="fotos">
+      <img src="mercado1.jpg" alt="Mercado Kanasín">
+      <img src="colonia1.jpg" alt="Colonia Kanasín">
+      <img src="mercado2.jpg" alt="Mercado Kanasín">
+      <img src="colonia2.jpg" alt="Colonia Kanasín">
+    </div>
+    <p>Recorridos por el municipio para escuchar y construir juntos. Actividad orgánica e informativa.</p>
+  </div>
 
-    <hr>
+  <div class="card" id="formacion">
+    <h3>03 — FORMACIÓN 4T</h3>
+    <p>Libros y cuadernos de formación</p>
+    <img src="libros-formacion.jpg" alt="Libros Formación 4T">
+    <p>Material de estudio, formación política y organización comunitaria. Documentos Básicos y Cuadernos de Formación de MORENA.</p>
+    <a class="btn btn-guinda" href="https://morena.org" target="_blank" rel="noopener">Visitar página oficial de MORENA →</a>
+  </div>
+</section>
 
-    <h2>⚖️ Marco Normativo y Blindaje Jurídico</h2>
+<section class="marco">
+  <h2>Proceso Interno Ordinario de MORENA — Kanasín, Yucatán</h2>
+  <p style="color:#555;line-height:1.6">Coordinación de los Comités de Defensa de la Transformación y Soberanía Nacional. Carácter de la participación: Aspirante en Proceso Interno Ordinario. Ámbito territorial: Municipio de Kanasín, Yucatán, Secciones 0204–0223. Naturaleza de los trabajos: Organización de base, asambleas informativas, formación política, afiliación voluntaria y diagnóstico territorial interno.</p>
 
-    <h3>1. Normativa Interna de MORENA</h3>
-    <p>Las actividades se rigen conforme a la autodeterminación partidista y los siguientes documentos básicos:</p>
-    <ul>
-        <li><strong>Declaración de Principios y Programa:</strong> Ética de servicio sin mentir, robar o traicionar al pueblo.</li>
-        <li><strong>Estatuto de MORENA:</strong> Artículos 5 y 13 (derechos y afiliación voluntaria); Artículos 15 al 20 (integración de Comités de Defensa de la Transformación); Artículos 24, 33, 41 Bis, 44 y 44 Bis (procesos internos ordinarios y padrón de protagonistas).</li>
-    </ul>
+  <h4>1. Normativa Interna de MORENA</h4>
+  <ul>
+    <li>Declaración de Principios y Programa: Ética de servicio sin mentir, robar o traicionar al pueblo.</li>
+    <li>Estatuto de MORENA: Artículos 5 y 13 (derechos y afiliación voluntaria); Artículos 15 al 20 (integración de Comités de Defensa de la Transformación); Artículos 24, 33, 41 Bis, 44 y 44 Bis (procesos internos ordinarios y padrón de protagonistas).</li>
+  </ul>
 
-    <h3>2. Nivel Federal (Constitución, INE y Leyes Generales)</h3>
-    <ul>
-        <li><strong>CPEUM:</strong> Artículos 6, 7, 8, 9 (libertades de expresión, petición y asociación); Artículo 35 (derechos político-electorales); Artículo 41 Base I (autodeterminación de partidos políticos); Artículo 115 (municipio libre); Artículo 134 (uso imparcial de recursos —operación a costo cero sin recursos públicos o privados—).</li>
-        <li><strong>Legislación Electoral (LGPP y LGIPE):</strong> Los procesos internos y la formación de comités son actividades ordinarias permanentes (Artículos 2, 3, 23, 25, 34 y 35 de la LGPP). Conforme a la LGIPE (Artículos 3, 196, 198, 209, 211, 242) y el Reglamento de Fiscalización del INE, no existen actos anticipados al carecer de un llamado expreso al voto dirigido al electorado general ni entrega de dádivas.</li>
-    </ul>
+  <h4>2. Nivel Federal — Constitución, INE y Leyes Generales</h4>
+  <ul>
+    <li>CPEUM: Artículos 6, 7, 8, 9 (libertades de expresión, petición y asociación); Artículo 35 (derechos político-electorales); Artículo 41 Base I (autodeterminación de partidos políticos); Artículo 115 (municipio libre); Artículo 134 (uso imparcial de recursos — operación a costo cero sin recursos públicos o privados).</li>
+    <li>LGPP y LGIPE: Los procesos internos y la formación de comités son actividades ordinarias permanentes (Artículos 2, 3, 23, 25, 34 y 35 de la LGPP). Conforme a la LGIPE (Artículos 3, 196, 198, 209, 211, 242) y el Reglamento de Fiscalización del INE, no existen actos anticipados al carecer de un llamado expreso al voto dirigido al electorado general ni entrega de dádivas.</li>
+  </ul>
 
-    <h3>3. Nivel Estatal (Yucatán e IEPAC)</h3>
-    <ul>
-        <li><strong>Constitución de Yucatán:</strong> Artículos 16, 20, 73, 76 y 77 en materia de derechos políticos y régimen municipal.</li>
-        <li><strong>IEPAC (LIPEEY y Reglamento de Selecciones):</strong> Los Artículos 3, 196 a 206, 211, 228 y 242 distinguen la vida orgánica de los partidos frente a los procesos de selección de candidaturas constitucionales.</li>
-        <li><strong>Participación Ciudadana:</strong> Ley estatal de la materia y principios de organización vecinal pacífica.</li>
-    </ul>
+  <h4>3. Nivel Estatal — Yucatán e IEPAC</h4>
+  <ul>
+    <li>Constitución de Yucatán: Artículos 16, 20, 73, 76 y 77 en materia de derechos políticos y régimen municipal.</li>
+    <li>IEPAC (LIPEEY y Reglamento de Selecciones): Artículos 3, 196 a 206, 211, 228 y 242 distinguen la vida orgánica de los partidos frente a los procesos de selección de candidaturas constitucionales.</li>
+    <li>Participación Ciudadana: Ley estatal de la materia y principios de organización vecinal pacífica.</li>
+  </ul>
 
-    <h3>4. Nivel Municipal (Ley de Gobierno de los Municipios del Estado de Yucatán)</h3>
-    <ul>
-        <li><strong>Ley de Gobierno de los Municipios (Artículos 1, 2, 7, 30, 55, 77, 82 y 86):</strong> Reconoce la autonomía de Kanasín y reserva la prestación de servicios públicos al H. Ayuntamiento. El buzón de diagnóstico de este sitio es de carácter analítico interno y no sustituye trámites oficiales ni emite promesas de obra pública.</li>
-    </ul>
+  <h4>4. Nivel Municipal — Ley de Gobierno de los Municipios del Estado de Yucatán</h4>
+  <ul>
+    <li>Ley de Gobierno de los Municipios (Artículos 1, 2, 7, 30, 55, 77, 82 y 86): Reconoce la autonomía de Kanasín y reserva la prestación de servicios públicos al H. Ayuntamiento. Este sitio es de carácter analítico interno y no sustituye trámites oficiales ni emite promesas de obra pública.</li>
+  </ul>
 
-    <hr>
+  <h4>Transparencia</h4>
+  <ul>
+    <li>Archivos: <b>index.html</b>, material gráfico de asambleas, carpetas <b>pdf/</b> y <b>videos/</b> con registros de formación interna.</li>
+    <li>Operación técnica: Alojado en GitHub Pages a costo cero ($0.00 MXN), sin pauta digital ni financiamiento externo.</li>
+  </ul>
+</section>
 
-    <h2>📁 Estructura del Repositorio y Transparencia</h2>
-    <ul>
-        <li>Archivos principales: <code>index.html</code>, material gráfico de asambleas (<code>Formato_Asamblea_Informativa_Kanasin_CARTA.jpg</code>), carpetas <code>pdf/</code> y <code>videos/</code> con registros de formación interna.</li>
-        <li><strong>Operación técnica:</strong> Alojado en GitHub Pages a costo cero ($0.00 MXN), sin pauta digital ni financiamiento externo.</li>
-    </ul>
-</div>
+<section class="legal" id="contacto">
+  <div class="legal-box">
+    <b>AVISO LEGAL INFORMATIVO</b><br>
+    Esta página es de carácter informativo y de difusión de ideas. No se ofrecen alimentos, apoyos materiales o programas. No existe buzón de quejas ni formatos oficiales. No se realizan promesas ni compromisos de programas sociales. No promueve candidaturas, no constituye propaganda electoral ni realiza actos anticipados de precampaña o campaña. Kanasín, Yucatán.
+  </div>
+  <p style="margin-top:12px">Contacto: Escríbeme por Facebook / WhatsApp — Kanasín, Yucatán</p>
+</section>
+
+<footer>
+  © 2024 Eduardo Javier Mora González • Morita el Mototaxista • Hecho en Kanasín, Yucatán • Diseño guinda / blanco / dorado
+</footer>
 
 </body>
 </html>
